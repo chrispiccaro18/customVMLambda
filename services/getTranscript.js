@@ -15,16 +15,12 @@ const getTranscript = jobName => {
       return request
         .get(transcriptionJob.TranscriptionJob.Transcript.TranscriptFileUri)
         .set('Accept', 'application/json')
+        .buffer(true)
         .then(response => {
-          console.log(response.body);
-          const transcripts = response.body;
-          // console.log('transcript', transcript);
-          // console.log('transcript results', transcript.results);
-          // console.log('transcripts', transcript.results.transcripts);
-          return transcripts.results.transcripts[0].transcript || null
-        })
-
-    })
+          const transcripts = JSON.parse(response.body.toString());
+          return transcripts.results.transcripts[0].transcript || null;
+        });
+    });
 };
 
 module.exports = getTranscript;

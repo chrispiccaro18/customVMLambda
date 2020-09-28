@@ -40,12 +40,12 @@ exports.handler = (event, context, callback) => {
               });
             })
             .catch(err => {
-              console.log(err);
+              console.log('Error with accessing S3 for audio:', err);
               callback(err);
             });
         })
         .catch(err => {
-          console.log(err);
+          console.log('Error with getting transcript: ', err);
           callback(err);
         });
     } else if (
@@ -59,5 +59,4 @@ exports.handler = (event, context, callback) => {
       console.log('Transcript Not Ready');
     }
   });
-  // callback(null, 'Hello from Lambda');
 };
