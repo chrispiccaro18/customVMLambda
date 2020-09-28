@@ -7,55 +7,55 @@
       "eventSource": "aws:dynamodb",
       "awsRegion": "us-west-2",
       "dynamodb": {
-          "ApproximateCreationDateTime": 1601074663,
-          "Keys": {
-            "contactId": { "S": "97d958f3-be9c-4262-a7e0-0b33a957bd42" },
-            "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" }
-          },
-          "NewImage": {
-            "shouldEncrypt": { "BOOL": false },
-            "recordingBucketName": {
-              "S": "us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8"
-            },
-            "transcribeStatus": { "S": "COMPLETED" },
-            "contactId": { "S": "97d958f3-be9c-4262-a7e0-0b33a957bd42" },
-            "recordingBucketRegion": { "S": "us-west-2" },
-            "recordingUrl": {
-              "S": "https://s3-us-west-2.amazonaws.com/us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8/recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
-            },
-            "contactPhoneNumber": { "S": "+12034611874" },
-            "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
-            "assigneeId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
-            "shouldTranscribe": { "BOOL": true },
-            "recordingObjectKey": {
-              "S": "recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
-            },
-            "timestamp": { "N": "1601074624" }
-          },
-          "OldImage": {
-            "shouldEncrypt": { "BOOL": false },
-            "recordingBucketName": {
-              "S": "us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8"
-            },
-            "transcribeStatus": { "S": "IN_PROGRESS" },
-            "contactId": { "S": "97d958f3-be9c-4262-a7e0-0b33a957bd42" },
-            "recordingBucketRegion": { "S": "us-west-2" },
-            "recordingUrl": {
-              "S": "https://s3-us-west-2.amazonaws.com/us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8/recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
-            },
-            "contactPhoneNumber": { "S": "+12034611874" },
-            "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
-            "assigneeId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
-            "shouldTranscribe": { "BOOL": true },
-            "recordingObjectKey": {
-              "S": "recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
-            },
-            "timestamp": { "N": "1601074624" }
-          },
-          "SequenceNumber": "755000000000017948932512",
-          "SizeBytes": 1293,
-          "StreamViewType": "NEW_AND_OLD_IMAGES"
+        "ApproximateCreationDateTime": 1601074663,
+        "Keys": {
+          "contactId": { "S": "97d958f3-be9c-4262-a7e0-0b33a957bd42" },
+          "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" }
         },
+        "NewImage": {
+          "shouldEncrypt": { "BOOL": false },
+          "recordingBucketName": {
+            "S": "us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8"
+          },
+          "transcribeStatus": { "S": "COMPLETED" },
+          "contactId": { "S": "97d958f3-be9c-4262-a7e0-0b33a957bd42" },
+          "recordingBucketRegion": { "S": "us-west-2" },
+          "recordingUrl": {
+            "S": "https://s3-us-west-2.amazonaws.com/us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8/recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
+          },
+          "contactPhoneNumber": { "S": "+12034611874" },
+          "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
+          "assigneeId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
+          "shouldTranscribe": { "BOOL": true },
+          "recordingObjectKey": {
+            "S": "recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
+          },
+          "timestamp": { "N": "1601074624" }
+        },
+        "OldImage": {
+          "shouldEncrypt": { "BOOL": false },
+          "recordingBucketName": {
+            "S": "us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8"
+          },
+          "transcribeStatus": { "S": "IN_PROGRESS" },
+          "contactId": { "S": "97d958f3-be9c-4262-a7e0-0b33a957bd42" },
+          "recordingBucketRegion": { "S": "us-west-2" },
+          "recordingUrl": {
+            "S": "https://s3-us-west-2.amazonaws.com/us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8/recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
+          },
+          "contactPhoneNumber": { "S": "+12034611874" },
+          "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
+          "assigneeId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
+          "shouldTranscribe": { "BOOL": true },
+          "recordingObjectKey": {
+            "S": "recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
+          },
+          "timestamp": { "N": "1601074624" }
+        },
+        "SequenceNumber": "755000000000017948932512",
+        "SizeBytes": 1293,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
       "eventSourceARN": "arn:aws:dynamodb:us-west-2:304658514143:table/US-Chem-VM-VoicemailStack-72KL8D9BTYE4-ContactVoicemailTable-19BRNF1FO4ZOE/stream/2020-09-25T15:47:50.633"
     }
   ]
