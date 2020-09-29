@@ -16,9 +16,9 @@ const s3 = new AWS.S3();
 
 const LINK_EXPERATION = 604800;
 
-exports.handler = (event, context, callback) => {
+exports.handler = async event => {
   const { Records } = event;
-  return Promise.all(
+  return await Promise.all(
     Records.map(async record => {
       const newRecord = AWS.DynamoDB.Converter.unmarshall(
         record.dynamodb.NewImage
@@ -56,15 +56,13 @@ exports.handler = (event, context, callback) => {
         };
         const emailContent = createEmail(voicemailInfo);
 
-        return transporter.sendMail(emailContent, err => {
-          if (err) {
-            console.log('Error sending email', err);
-            callback(err);
-          } else {
-            console.log('Email sent successfully');
-            callback();
-          }
-        });
+        console.log('here', emailContent);
+        try {
+          await transporter.sendMail(emailContent);
+          console.log('Email sent successfully');
+        } catch (err) {
+          console.error('Error with sending email: ', err);
+        }
       } else if (
         newRecord.transcribeStatus === null ||
         newRecord.transcribeStatus === undefined
