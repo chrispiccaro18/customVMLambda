@@ -56,7 +56,7 @@ exports.handler = (event, context, callback) => {
         };
         const emailContent = createEmail(voicemailInfo);
 
-        transporter.sendMail(emailContent, err => {
+        return transporter.sendMail(emailContent, err => {
           if (err) {
             console.log('Error sending email', err);
             callback(err);
