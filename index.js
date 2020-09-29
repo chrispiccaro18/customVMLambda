@@ -12,7 +12,9 @@ const transporter = nodemailer.createTransport({
   SES: ses,
 });
 
-const s3 = new AWS.S3();
+const s3 = new AWS.S3({
+  region: 'us-west-2',
+});
 
 const LINK_EXPERATION = 604800;
 
@@ -71,6 +73,7 @@ exports.handler = async event => {
       } else {
         // return Promise.resolve({message: "Unhandled Resolution"});
         console.log('Transcript Not Ready');
+        return;
       }
     })
   );
