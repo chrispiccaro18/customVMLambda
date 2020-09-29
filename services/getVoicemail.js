@@ -10,7 +10,7 @@ const getVoicemailAudio = (s3, bucket, key) => {
         reject({ error: 'Error getting S3 object' + err });
         return;
       }
-      console.log(s3Object);
+      
       resolve(s3Object.Body);
     });
   });
@@ -24,7 +24,7 @@ const getVoicemailLink = (s3, bucket, key, expires) => {
       Expires: expires,
     };
 
-    return s3.getSignedURL('getObject', params, (err, preSignedUrl) => {
+    return s3.getSignedUrl('getObject', params, (err, preSignedUrl) => {
       if (err) {
         reject({ error: 'Error getting S3 object url:' + err });
         return;
