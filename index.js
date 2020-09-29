@@ -56,7 +56,6 @@ exports.handler = async event => {
         };
         const emailContent = createEmail(voicemailInfo);
 
-        console.log('here', emailContent);
         try {
           await transporter.sendMail(emailContent);
           console.log('Email sent successfully');
