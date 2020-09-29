@@ -5,7 +5,7 @@ const transcribe = new AWS.TranscribeService();
 
 const getTranscript = jobName => {
   const params = {
-    TranscriptionJobName: jobName
+    TranscriptionJobName: jobName,
   };
 
   return transcribe
