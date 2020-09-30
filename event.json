@@ -23,7 +23,7 @@
           "recordingUrl": {
             "S": "https://s3-us-west-2.amazonaws.com/us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8/recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
           },
-          "contactPhoneNumber": { "S": "+12034611874" },
+          "contactPhoneNumber": { "S": "+15555555555" },
           "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
           "assigneeId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
           "shouldTranscribe": { "BOOL": true },
@@ -43,7 +43,7 @@
           "recordingUrl": {
             "S": "https://s3-us-west-2.amazonaws.com/us-chem-vm-voicemailstack-7-audiorecordingsbucket-19ze1oq7smkf8/recordings/97d958f3-be9c-4262-a7e0-0b33a957bd42_1601074624.wav"
           },
-          "contactPhoneNumber": { "S": "+12034611874" },
+          "contactPhoneNumber": { "S": "+15555555555" },
           "readerId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
           "assigneeId": { "S": "7f26ed14-179c-4a71-a64f-0abc33efeeb4" },
           "shouldTranscribe": { "BOOL": true },
