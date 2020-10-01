@@ -14,8 +14,13 @@ const createEmail = voicemail => {
   const audioLink = `<p><a href="${voicemail.voicemailLink}">Click Here</a> to listen to the voicemail</p>`;
   html += audioLink;
 
+  const fromEmailAddress =
+    voicemail.readerId === process.env.WELLABIS_AGENT_ID
+      ? 'wellabisvm@gmail.com'
+      : 'uschemwobvm@gmail.com';
+
   return {
-    from: 'uschemwobvm@gmail.com',
+    from: fromEmailAddress,
     subject: `New voicemail from ${voicemail.contactPhoneNumber}`,
     html,
     attachments: [
