@@ -69,9 +69,8 @@ exports.handler = async event => {
         newRecord.transcribeStatus === undefined
       ) {
         // return this._deliver(newVoicemail);
-        console.log('hi');
+        console.log('Transcribe Status null or undefined. OG code still delivered voicemail');
       } else {
-        // return Promise.resolve({message: "Unhandled Resolution"});
         console.log('Transcript Not Ready');
         return;
       }
