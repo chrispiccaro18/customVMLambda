@@ -44,7 +44,7 @@ exports.handler = async event => {
         );
         const voicemailLink = await getVoicemailLink(
           s3,
-          recordingObjectKey,
+          recordingBucketName,
           recordingObjectKey,
           LINK_EXPERATION
         );
