@@ -10,7 +10,7 @@ const getVoicemailAudio = (s3, bucket, key) => {
         reject({ error: 'Error getting S3 object' + err });
         return;
       }
-      
+
       resolve(s3Object.Body);
     });
   });

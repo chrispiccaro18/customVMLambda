@@ -44,7 +44,7 @@ exports.handler = async event => {
         );
         const voicemailLink = await getVoicemailLink(
           s3,
-          recordingObjectKey,
+          recordingBucketName,
           recordingObjectKey,
           LINK_EXPERATION
         );
@@ -69,9 +69,8 @@ exports.handler = async event => {
         newRecord.transcribeStatus === undefined
       ) {
         // return this._deliver(newVoicemail);
-        console.log('hi');
+        console.log('Transcribe Status null or undefined. OG code still delivered voicemail');
       } else {
-        // return Promise.resolve({message: "Unhandled Resolution"});
         console.log('Transcript Not Ready');
         return;
       }
