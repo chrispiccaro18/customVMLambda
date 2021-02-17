@@ -20,6 +20,7 @@ const LINK_EXPERATION = 604800;
 
 exports.handler = async event => {
   const { Records } = event;
+  console.log("RECORDS:", Records)
   return await Promise.all(
     Records.map(async record => {
       const newRecord = AWS.DynamoDB.Converter.unmarshall(
@@ -28,6 +29,9 @@ exports.handler = async event => {
       const oldRecord = AWS.DynamoDB.Converter.unmarshall(
         record.dynamodb.OldImage
       );
+
+      console.log("OLD:", oldRecord);
+      console.log("NEW:", newRecord);
       let transcribeCompleted =
         oldRecord.transcribeStatus === 'IN_PROGRESS' &&
         newRecord.transcribeStatus === 'COMPLETED';
