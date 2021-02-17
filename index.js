@@ -6,6 +6,7 @@ const {
   getVoicemailLink,
   getVoicemailAudio,
 } = require('./services/getVoicemail.js');
+const getAudioDuration = require('./utils/getAudioDuration.js');
 
 AWS.config.update({ region: 'us-west-2' });
 
@@ -46,6 +47,14 @@ exports.handler = async event => {
           recordingBucketName,
           recordingObjectKey
         );
+
+        // detect hangups
+        const voicemailDuration = getAudioDuration(voicemailAudio);
+        if(!transcript && (voicemailDuration < 1)) {
+          console.log('Hang up detected ', 'name: ', recordingBucketName, 'key: ', recordingObjectKey);
+          return;
+        }
+
         const voicemailLink = await getVoicemailLink(
           s3,
           recordingBucketName,
@@ -60,6 +69,7 @@ exports.handler = async event => {
           voicemailLink,
           expires: LINK_EXPERATION,
         };
+        
         const emailContent = createEmail(voicemailInfo);
 
         try {
